@@ -383,7 +383,11 @@ a{
         right: 0;
     }
 }
-
+@media (max-width: 1110px) {
+    .dress__item{
+        width: 25%;
+    }
+}
 @media (max-width: 770px) {
     .slider__wrapper {
         display: none;
@@ -407,6 +411,9 @@ a{
     }
     .menu__wrapper {
         flex-wrap: wrap;
+    }
+    .dress__item {
+        width: 33%;
     }
 }
 
