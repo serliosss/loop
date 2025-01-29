@@ -431,6 +431,16 @@ a{
         flex-direction: column;
     }
 }
+@media (max-width: 576px) {
+    .dress__item {
+        width: 50%;
+    }
+}
+@media (max-width: 320px) {
+    .dress__item {
+        width: 100%;
+    }
+}
 .show {
     display: block;
 }
