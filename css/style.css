@@ -415,6 +415,16 @@ a{
     .dress__item {
         width: 33%;
     }
+
+    .man-woman .container {
+        flex-wrap: wrap;
+    }
+    .man-woman {
+        background: linear-gradient(180deg, rgba(249,246,241,1) 0%, rgba(249,246,241,1) 50%, rgba(249,224,224,1) 50%, rgba(249,224,224,1) 100%);
+    }
+    .man, .woman {
+        width: 100%;
+    }
 }
 
 @media (max-width: 600px) {
