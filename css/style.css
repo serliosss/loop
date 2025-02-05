@@ -91,7 +91,7 @@ main {
     height: 30px;
     background-color: #D7B399;
 }
-.man-woman__link:hover, .man-woman__link:focus {
+.man-woman__link:hover, .man-woman__link:focus, .man-woman__link:active {
     background-color: #b8947b;
     transform: scale(1.1);
     transition: 0.3s;
@@ -149,7 +149,7 @@ main {
     text-transform: uppercase;
     margin: 100px auto 0;
 }
-.new__btn:hover, .new__btn:focus {
+.new__btn:hover, .new__btn:focus, .new__btn:active {
     background-color: #b8947b;
     transform: scale(1.1);
     transition: 0.3s;
@@ -166,6 +166,7 @@ main {
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
+    flex-shrink: 0;
 }
 .navbar-toggler {
     display: none;
@@ -191,11 +192,15 @@ a{
     top: 0;
     z-index: 100;
 }
+.header-menu-link {
+    padding-right: 15px;
+}
 .logo {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    flex-shrink: 0;
 }
 .logo h1 {
     margin-left: 20px;
@@ -205,6 +210,8 @@ a{
 .for-who {
     font-size: 14px;
     color: #212121;
+    flex-shrink: 0;
+    padding-right: 15px;
 }
 .market {
     display: flex;
@@ -311,18 +318,32 @@ a{
     display: flex;
 }
 .dress {
-    display: flex;
+    display: grid;
 }
 .dress__item {
     width: 277px;
     height: 236px;
     text-align: right;
+    font-size: 22px;
+}
+.dress-text {
+    place-self: start;
 }
 .dress__item--gray {
     background-color: #f4f4f4;
+    color: black;
+    background-image: url("../img/tshirt.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 205px 205px;
 }
 .dress__item--cream {
     background-color: #f9f6f1;
+    color: black;
+    background-image: url("../img/tshirt.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 205px 205px;
 }
 
 /*---------------section subscribe---------------------*/
@@ -385,9 +406,30 @@ a{
 }
 @media (max-width: 1110px) {
     .dress__item{
-        width: 25%;
+        width: 33%;
     }
+
+    .catalog{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
 }
+
+@media (max-width: 800px) {
+    .container__subscribe {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .subscribe {
+        padding: 2%;
+    }
+    .menu__wrapper {
+        flex-wrap: wrap;
+    }
+}   
+
 @media (max-width: 770px) {
     .slider__wrapper {
         display: none;
@@ -398,6 +440,9 @@ a{
     .header {
         min-height: 90px;
     }
+    .menu__wrapper {
+        flex-wrap: wrap;
+    }   
     .logo {
         order: -1;
         width: 70%;
@@ -409,11 +454,8 @@ a{
     a{
         margin: 10px;
     }
-    .menu__wrapper {
-        flex-wrap: wrap;
-    }
     .dress__item {
-        width: 33%;
+        width: 50%;
     }
 
     .man-woman .container {
@@ -440,17 +482,32 @@ a{
     .mainmenu__list {
         flex-direction: column;
     }
+    .subscribe__email {
+        width: 275px;
+        height: 60px;
+    }
 }
 @media (max-width: 576px) {
     .dress__item {
         width: 50%;
     }
 }
-@media (max-width: 320px) {
+@media (max-width: 500px) {
     .dress__item {
         width: 100%;
     }
 }
+@media (max-width: 490px) {
+    .subscribe {
+        padding: 25px;
+    }
+    .subscribe__email {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+
 .show {
     display: block;
 }
